@@ -16,21 +16,53 @@ def q2():
     2. Verificação de Número Par/Ímpar: Crie um programa que pede ao usuário 
     um número e imprima se ele é par ou ímpar.
     """
-    print("par ")
+    num = int(input("Digite um numero"))
+   
+    if num % 2 == 0:
+        print("par")
+    else:
+        print("ímpar")
+
 
 def q3():
     """
     3. Calculadora Simples: Faça uma calculadora que pede ao usuário dois 
     números e uma operação (+, -, *, /) e imprima o resultado dessa operação.
     """
-    pass
+    num1 = float(input("Digite um numero 1"))
+    num2 = float(input("Digite um numero 2"))
+    ler = input("Digite a operação")
+    
+    if ler == "+":
+        print(num1+num2)
+    elif ler == "-":
+        print(num1-num2)
+    elif ler == "*":
+        print(num1*num2)
+    elif ler == "/":
+        print(num1/num2)
+    else: 
+        print("Volte para o incio")
+
+
 
 def q4():
     """
     4. Maior de Três Números: Escreva um programa que solicita três números 
     ao usuário e imprima o maior dentre eles.
     """
-    pass
+    n1 = int(input("Digite um número"))
+    n2 = int(input("Digite um número"))
+    n3 = int(input("Digite um número"))
+
+    if n1 > n2 and n3:
+        print(n1)
+    elif n2 > n1 and n3:
+        print(n2)
+    elif n3 > n1 and n2:
+        print(n3)
+    else:
+        print("Boa sorte") 
 
 def q5():
     """
@@ -78,3 +110,5 @@ def q10():
     se um ano fornecido pelo usuário é bissexto ou não.
     """
     pass
+
+q4()
