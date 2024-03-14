@@ -29,9 +29,9 @@ def q3():
     3. Calculadora Simples: Faça uma calculadora que pede ao usuário dois 
     números e uma operação (+, -, *, /) e imprima o resultado dessa operação.
     """
-    num1 = float(input("Digite um numero 1"))
-    num2 = float(input("Digite um numero 2"))
-    ler = input("Digite a operação")
+    num1 = float(input("Digite um numero 1 "))
+    num2 = float(input("Digite um numero 2 "))
+    ler = input("Digite a operação ")
     
     if ler == "+":
         print(num1+num2)
@@ -41,7 +41,7 @@ def q3():
         print(num1*num2)
     elif ler == "/":
         print(num1/num2)
-    else: 
+    else:
         print("Volte para o incio")
 
 
@@ -51,16 +51,16 @@ def q4():
     4. Maior de Três Números: Escreva um programa que solicita três números 
     ao usuário e imprima o maior dentre eles.
     """
-    n1 = float(input("Digite um número"))
-    n2 = float(input("Digite um número"))
-    n3 = float(input("Digite um número"))
+    n1 = float(input("Digite um número "))
+    n2 = float(input("Digite um número "))
+    n3 = float(input("Digite um número "))
 
     if n1 > n2 and n1 > n3:
-        print(n1)
+        print(n1 )
     elif n2 > n1 and n2 > n3:
-        print(n2)
+        print(n2 )
     elif  n3 > n1 and n3 > n2:
-        print(n3)
+        print(n3 )
     else:
         print()
 
@@ -87,18 +87,18 @@ def q6():
     lados e verifique se eles podem formar um triângulo. Se sim, determine 
     se é um triângulo equilátero, isósceles ou escaleno.
     """
-    md1 = float(input("escreva sua medida"))
-    md2 = float(input("escreva sua medida"))
-    md3 = float(input("escreva sua medida"))
+    md1 = float(input("escreva sua medida "))
+    md2 = float(input("escreva sua medida "))
+    md3 = float(input("escreva sua medida "))
     
     if md1 == md2 == md3:
-        print("Equilátero")
+        print("Equilátero ")
     elif md1 == md2 or md1 == md3 or md2 == md3:
-        print("Isósceles")
+        print("Isósceles ")
     elif md1 != md2 != md3: 
-        print("Escaleno")
+        print("Escaleno ")
     else: 
-        print("Não é um triângulo")
+        print("Não é um triângulo ")
 
 
 def q7():
@@ -131,8 +131,8 @@ def q8():
     de usuário e uma senha. Se o nome de usuário for "admin" e a senha for 
     "12345", exiba "Acesso concedido", caso contrário, exiba "Acesso negado".
     """
-    login = str(input("Digite seu email"))
-    senha = str(input("Digite sua senha"))
+    login = str(input("Digite seu email "))
+    senha = str(input("Digite sua senha "))
 
     login_certo = "admin"
     senha_certa = "12345"
@@ -150,21 +150,21 @@ def q9():
       indicando se a pessoa está: Abaixo do peso, Peso normal, Sobrepeso, 
       Obesa ou Muito obesa.
     """
-    peso = float(input("Digite sua peso"))
-    altura = float(input("Digite sua altura"))
+    peso = float(input("Digite sua peso "))
+    altura = float(input("Digite sua altura "))
     
     IMC = peso//(altura * altura)
     
     if IMC <= 18.5:
-        print("MAGREZA")
+        print("MAGREZA ")
     elif IMC >= 18.5 and IMC <= 24.9:
-        print("NORMAL")
+        print("NORMAL ")
     elif IMC >= 25 and IMC <= 29.9:
-        print("SOBREPESO")
+        print("SOBREPESO ")
     elif IMC >= 30 and IMC <= 39.9:
-        print("OBESIDADE")
+        print("OBESIDADE ")
     else:
-        print("OBESIDADE GRAVE")
+        print("OBESIDADE GRAVE ")
 
 def q10():
     """
@@ -173,4 +173,3 @@ def q10():
     """
     pass
 
-q9()
