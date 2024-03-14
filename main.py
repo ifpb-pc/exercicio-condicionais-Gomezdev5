@@ -23,7 +23,6 @@ def q2():
     else:
         print("ímpar")
 
-
 def q3():
     """
     3. Calculadora Simples: Faça uma calculadora que pede ao usuário dois 
@@ -31,7 +30,7 @@ def q3():
     """
     num1 = float(input("Digite um numero 1 "))
     num2 = float(input("Digite um numero 2 "))
-    ler = input("Digite a operação ")
+    ler = input("Digite a operação +,-,*,/ ")
     
     if ler == "+":
         print(num1+num2)
@@ -44,8 +43,6 @@ def q3():
     else:
         print("Volte para o incio")
 
-
-
 def q4():
     """
     4. Maior de Três Números: Escreva um programa que solicita três números 
@@ -55,12 +52,12 @@ def q4():
     n2 = float(input("Digite um número "))
     n3 = float(input("Digite um número "))
 
-    if n1 > n2 and n1 > n3:
-        print(n1 )
-    elif n2 > n1 and n2 > n3:
-        print(n2 )
-    elif  n3 > n1 and n3 > n2:
-        print(n3 )
+    if n1 >= n2 and n1 >= n3:
+        print(n1)
+    elif n2 >= n1 and n2 >= n3:
+        print(n2)
+    elif  n3 >= n1 and n3 >= n2:
+        print(n3)
     else:
         print()
 
@@ -80,26 +77,24 @@ def q5():
     else:
         print("Idoso")
 
-
 def q6():
     """
     6. Verificação de Triângulo: Peça ao usuário o comprimento de três 
     lados e verifique se eles podem formar um triângulo. Se sim, determine 
     se é um triângulo equilátero, isósceles ou escaleno.
     """
-    md1 = float(input("escreva sua medida "))
-    md2 = float(input("escreva sua medida "))
-    md3 = float(input("escreva sua medida "))
+    md1 = int(input(""))
+    md2 = int(input(""))
+    md3 = int(input(""))
     
-    if md1 == md2 == md3:
+    if (md1 >= md2 + md3) or (md2 >= md1 + md3) or (md3 >= md1 + md2):
+        print("Inválido ")
+    elif (md1 == md2) and (md1 == md3):
         print("Equilátero ")
-    elif md1 == md2 or md1 == md3 or md2 == md3:
-        print("Isósceles ")
-    elif md1 != md2 != md3: 
+    elif (md1 == md2) or (md1 == md3) or (md2 == md3):
+        print("Isóceles ")
+    else:
         print("Escaleno ")
-    else: 
-        print("Não é um triângulo ")
-
 
 def q7():
     """
@@ -124,7 +119,6 @@ def q7():
     else:
         print("não obteve nota")
 
-
 def q8():
     """
     8. Validação de Login: Crie um programa que pede ao usuário um nome 
@@ -134,14 +128,13 @@ def q8():
     login = str(input("Digite seu email "))
     senha = str(input("Digite sua senha "))
 
-    login_certo = "admin"
-    senha_certa = "12345"
+    ADMIN = "admin"
+    PASSWORD = "12345"
 
-    if login == login_certo and senha == senha_certa:
+    if login == ADMIN and senha == PASSWORD:
         print("Acesso concedido")
     else:
         print("Acesso negado")
-
 
 def q9():
     """
@@ -150,26 +143,54 @@ def q9():
       indicando se a pessoa está: Abaixo do peso, Peso normal, Sobrepeso, 
       Obesa ou Muito obesa.
     """
-    peso = float(input("Digite sua peso "))
-    altura = float(input("Digite sua altura "))
+    peso = int(input("Digite sua peso "))
+    altura = float(input("Digite sua altura ")) 
+    IMC = float(peso//(altura**2))
     
-    IMC = peso//(altura * altura)
+    match IMC:
+        case IMC if IMC < 18.5:
+            print("Abaixo do peso ")
+        case IMC if IMC > 18.5 and IMC < 25:
+            print("Peso normal")
+        case IMC if IMC > 25 and IMC < 30:
+            print("Sobrepeso ")
+        case IMC if IMC > 30 and IMC < 35:
+            print("Obeso ")
+        case IMC if IMC > 35:
+            print("Muito obeso ")
     
-    if IMC <= 18.5:
-        print("MAGREZA ")
-    elif IMC >= 18.5 and IMC <= 24.9:
-        print("NORMAL ")
-    elif IMC >= 25 and IMC <= 29.9:
-        print("SOBREPESO ")
-    elif IMC >= 30 and IMC <= 39.9:
-        print("OBESIDADE ")
+    """
+    if IMC < 18.5:
+        print("Abaixo do peso ")
+    elif IMC >= 18.5 and IMC < 24.9:
+        print("'Peso normal")
+    elif IMC >= 25 and IMC < 29.9:
+        print("Sobrepeso ")
+    elif IMC >= 30 and IMC < 39.9:
+        print("Obeso ")
     else:
-        print("OBESIDADE GRAVE ")
+        print("Muito obeso ")
+    """
 
 def q10():
     """
     10. Verificação de Ano Bissexto: Escreva um programa que verifica 
     se um ano fornecido pelo usuário é bissexto ou não.
     """
-    pass
+    ano = int(input(""))
+
+    if ano % 4 == 0:
+        if ano % 100 == 0:
+            if ano  % 400 == 0:
+                print("bissexto")
+            else:
+                print("não")
+        else:
+            print("bissexto")
+    else:
+        print("Não")
+
+
+
+
 
