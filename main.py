@@ -83,18 +83,19 @@ def q6():
     lados e verifique se eles podem formar um triângulo. Se sim, determine 
     se é um triângulo equilátero, isósceles ou escaleno.
     """
-    md1 = int(input(""))
-    md2 = int(input(""))
-    md3 = int(input(""))
-    
-    if (md1 >= md2 + md3) or (md2 >= md1 + md3) or (md3 >= md1 + md2):
-        print("Inválido ")
-    elif (md1 == md2) and (md1 == md3):
-        print("Equilátero ")
-    elif (md1 == md2) or (md1 == md3) or (md2 == md3):
-        print("Isóceles ")
+    ladoA = int(input(""))
+    ladoB = int(input(""))
+    ladoC = int(input(""))
+
+    if (ladoA >= ladoB + ladoC) or (ladoB >= ladoA + ladoC) or (ladoC >= ladoA + ladoB):
+        print("Inválido")
     else:
-        print("Escaleno ")
+        if (ladoA == ladoB) and (ladoA == ladoC):
+            print("Equilátero")
+        elif (ladoA == ladoB) or (ladoA == ladoC) or (ladoB == ladoC):
+            print("Isósceles")
+        else:
+            print("Escaleno")
 
 def q7():
     """
@@ -143,23 +144,23 @@ def q9():
       indicando se a pessoa está: Abaixo do peso, Peso normal, Sobrepeso, 
       Obesa ou Muito obesa.
     """
-    peso = int(input("Digite sua peso "))
-    altura = float(input("Digite sua altura ")) 
-    IMC = float(peso//(altura**2))
-    
-    match IMC:
-        case IMC if IMC < 18.5:
-            print("Abaixo do peso ")
-        case IMC if IMC > 18.5 and IMC < 25:
+    h = float(input(""))
+    peso = int(input(""))
+    imc = peso/h**2
+
+    match imc:
+        case imc if imc < 18.5:
+            print("Abaixo do peso")
+        case imc if imc > 18.5 and imc < 25:
             print("Peso normal")
-        case IMC if IMC > 25 and IMC < 30:
-            print("Sobrepeso ")
-        case IMC if IMC > 30 and IMC < 35:
-            print("Obeso ")
-        case IMC if IMC > 35:
-            print("Muito obeso ")
-    
-    """
+        case imc if imc > 26 and imc < 30:
+            print("Sobrepeso")
+        case imc if imc > 30 and imc < 35:
+            print("Obeso")
+        case imc if imc > 35 :
+            print("Muito obeso")
+ 
+"""
     if IMC < 18.5:
         print("Abaixo do peso ")
     elif IMC >= 18.5 and IMC < 24.9:
@@ -170,7 +171,7 @@ def q9():
         print("Obeso ")
     else:
         print("Muito obeso ")
-    """
+"""
 
 def q10():
     """
@@ -188,7 +189,8 @@ def q10():
         else:
             print("bissexto")
     else:
-        print("Não")
+        print("não")
+
 
 
 
